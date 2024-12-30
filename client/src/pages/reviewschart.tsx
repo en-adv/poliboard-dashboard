@@ -34,7 +34,7 @@ const ReviewsChart = () => {
 
     const fetchChartData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/v1/charts");
+            const response = await axios.get("http://poliboard-dashboard.vercel.app/api/v1/charts");
             const data = response.data;
 
             const series = data.map((region: any) => ({
