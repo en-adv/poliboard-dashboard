@@ -3,7 +3,7 @@ import Metric from '../mongodb/models/metric.js';
 const getMetrics = async (req, res) => {
     try {
         // Define the list of document ID prefixes
-        const documentIds = ['Batamcenter', 'Bengkong', 'Piayu', 'Batuaji'];
+        const documentIds = ['Batamcenter', 'Bengkong', 'Piayu', 'Batuaji', 'Nongsa', 'Tiban'];
 
         // Query MongoDB to get all documents with matching prefixes using $regex
         const rawMetricsList = await Metric.find({
