@@ -11,7 +11,6 @@ const updateBillboardPrices = async (req, res) => {
         for (const engagement of engagements) {
             const { title, percentage } = engagement;
 
-            // Fetch the property by title
             const property = await Property.findOne({ title });
             if (!property) continue;
 
