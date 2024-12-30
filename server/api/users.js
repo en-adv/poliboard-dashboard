@@ -1,10 +1,14 @@
 import express from 'express';
-import { someUserController } from '../controllers/userController'; // Your logic here
+import cors from 'cors';
 
 const app = express();
 
-app.use(express.json());
+app.use(cors({
+  origin: 'https://poliboard-dashboard-client.vercel.app',  // Allow your frontend to access the backend
+}));
 
-app.get('/api/v1/users', someUserController);
+app.get('/api/v1/users', (req, res) => {
+  res.json({ message: "Users route" });
+});
 
 export default app;
