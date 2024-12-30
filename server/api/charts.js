@@ -1,10 +1,14 @@
 import express from 'express';
-import { someChartController } from '../controllers/chartController'; // Your logic here
+import cors from 'cors';
 
 const app = express();
 
-app.use(express.json());
+app.use(cors({
+  origin: 'https://poliboard-dashboard-client.vercel.app',  // Allow your frontend to access the backend
+}));
 
-app.get('/api/v1/charts', someChartController);
+app.get('/api/v1/charts', (req, res) => {
+  res.json({ message: "Charts route" });
+});
 
 export default app;
