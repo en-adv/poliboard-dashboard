@@ -11,5 +11,6 @@ router.post('/update-prices', async (req, res) => {
       console.error("--------error update price", error);
       res.status(500).json({ message: '--------error update price' });
     }
+    
   });
 export default router;
