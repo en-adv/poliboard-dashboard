@@ -4,6 +4,7 @@ import Chart from '../mongodb/models/chart.js';
 const calculateAndUpdateMetrics = async () => {
     console.log("calculateAndUpdateMetrics function started");
 
+    
     try {
         const regionMapping = {
             Batamcenter: "Batam Center",
