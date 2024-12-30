@@ -52,7 +52,7 @@ const PropertyReferrals = () => {
 
       setEngagementData(calculatedData);
 // Send engagement data to the backend to update prices
-       await fetch('http://localhost:8080/api/v1/pricing/update-prices', {
+       await fetch('https://poliboard-dashboard.vercel.app/api/v1/pricing/update-prices', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
