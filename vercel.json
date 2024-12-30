@@ -12,7 +12,7 @@
     }
   },
   "routes": [
-    { "src": "/api/(.*)", "dest": "server/index.js" }, // Redirect API requests to the backend
+    { "src": "/api/v1/(.*)", "dest": "server/index.js" }, // Redirect API requests to the backend
     { "src": "/(.*)", "dest": "client/$1" }           // Redirect other requests to the frontend
   ]
 }
