@@ -1,10 +1,14 @@
 import express from 'express';
-import { somePropertiesController } from '../controllers/propertiesController'; // Your logic here
+import cors from 'cors';
 
 const app = express();
 
-app.use(express.json());
+app.use(cors({
+  origin: 'https://poliboard-dashboard-client.vercel.app',  // Allow your frontend to access the backend
+}));
 
-app.get('/api/v1/properties', somePropertiesController);
+app.get('/api/v1/properties', (req, res) => {
+  res.json({ message: "Properties route" });
+});
 
 export default app;
