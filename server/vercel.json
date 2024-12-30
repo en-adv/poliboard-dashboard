@@ -2,15 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/**/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     { "src": "/api/v1/users", "dest": "/api/users.js" },
     { "src": "/api/v1/properties", "dest": "/api/properties.js" },
-    { "src": "/api/v1/metrics", "dest": "/api/metrics.js" }
+    { "src": "/api/v1/metrics", "dest": "/api/metrics.js" },
+    { "src": "/api/v1/charts", "dest": "/api/charts.js" },
     { "src": "/api/v1/datacalc", "dest": "/api/datacalc.js" }
-    { "src": "/api/v1/charts", "dest": "/api/chart.js" }
   ]
 }
