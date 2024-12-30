@@ -1,10 +1,14 @@
 import express from 'express';
-import { someDatacalcController } from '../controllers/datacalcController'; // Your logic here
+import cors from 'cors';
 
 const app = express();
 
-app.use(express.json());
+app.use(cors({
+  origin: 'https://poliboard-dashboard-client.vercel.app',  // Allow your frontend to access the backend
+}));
 
-app.get('/api/v1/datacalc', someDatacalcController);
+app.get('/api/v1/datacalc', (req, res) => {
+  res.json({ message: "data route" });
+});
 
 export default app;
