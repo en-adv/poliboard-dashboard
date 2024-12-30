@@ -9,7 +9,9 @@ const calculateAndUpdateMetrics = async () => {
             Batamcenter: "Batam Center",
             Bengkong: "Bengkong",
             Piayu: "Piayu",
-            Batuaji: "Batu Aji"
+            Batuaji: "Batu Aji",
+            Nongsa: "Nongsa",
+            Tiban: "Tiban"
         };
 
         for (const [metricRegion, chartRegion] of Object.entries(regionMapping)) {
