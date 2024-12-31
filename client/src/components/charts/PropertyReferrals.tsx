@@ -47,7 +47,7 @@ const PropertyReferrals = () => {
         title: item.name,
         percentage:
           (item.data.reduce((acc: number, value: number) => acc + value, 0) / totalValues) * 100, // Sum of yesterday + today for each parameter
-        color: ['#475BE8', '#CFC8FF', '#FF7F0E', '#2CA02C'][index % 4], // Rotate colors
+        color: ['#475BE8', '#605678', '#FF7F0E', '#2CA02C', '#FF8A8A', '#800000'][index % 6], // Rotate colors
       }));
 
       setEngagementData(calculatedData);
